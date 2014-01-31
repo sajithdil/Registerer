@@ -1,0 +1,81 @@
+!!!
+html
+head
+    meta(content='en-us', http-equiv='Content-Language')
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title= 'Home'
+    style(type='text/css')
+      .home {
+      position: absolute;
+      }
+    script(src='javascripts/lib/jquery/jquery.js')
+    script(src='javascripts/animation/home_animate.js')
+  body
+    div.navbar.navbar-inverse
+      div.navbar-inner
+        div.container(style='width:auto')
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#') Home
+          div.nav-collapse
+            ul.nav
+              li
+                a(href='#') Home
+              li
+                a(href='#') None
+                li.dropdown
+                  a.dropdown-toggle(data-toggle='dropdown') Dropdown
+                    b.caret
+                    ul.dropdown-menu
+                      li
+                        a item1
+                      li.divider
+                      li
+                        a item2
+            form.navbar-search.pull-left
+            ul.nav.pull-right
+              li
+                a(href='#') Home
+              li
+                a(href='#') None
+                li.dropdown
+                  a.dropdown-toggle(data-toggle='dropdown') Dropdown
+                    b.caret
+                    ul.dropdown-menu
+                      li
+                        a item1
+                      li.divider
+                      li
+                        a item2
+              input.search-query.span2(placeholder='Search',type='text')
+    .home(style='width: 225px; height: 195px; left: 76px; top: 160px;')
+      img(alt='', src='images/Human_Resources.gif', height='193', width='226')
+    div(style='position: absolute;')
+      div(style='width: 1px; height: 200px; background-color: black; float: left; position: absolute; left: 318px; top: 109px;')
+    div(style='position: absolute; left: 343px; top: 166px; text-align: center; vertical-align: top;')
+      table(align="center", style='position: relative')
+        tr
+          td
+            label#Label1 Last Name:
+          td
+            input(name='txtLastName', type='text', style='width: 290px;')
+          td(style='display:block')
+            a#btnSearch.btn Search
+    div(style='position: absolute; left: 733px; top: 214px;')
+      img#imgAdSearch(src='images/advancedsearch_icon_up.png', alt='Advanced Search', height='50', width='50')
+    #divAdSearch(style='position: absolute; left: 343px; top: 215px; display: none;')
+      table
+        tr
+          td
+            label#Label2 First Name:
+          td
+            input(name='txtFirstName', type='text', style='width: 290px;')
+        tr
+          td
+            label#Label3 Department:
+          td
+            input(name='txtdepartment', type='text', style='width: 290px;')
+    div(style='position: absolute; left: 1000px; top:70px;')
+      img(src='images/key-icon.png', alt='Login', height='50', width='100')

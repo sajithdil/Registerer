@@ -1,0 +1,85 @@
+!!!
+html
+head
+    meta(content='en-us', http-equiv='Content-Language')
+    meta(content='text/html; charset=utf-8', http-equiv='Content-Type')
+    title= 'Home'
+    style(type='text/css')
+      .home {
+      position: absolute;
+      }
+      input.ui-pg-input {
+      width: auto;
+      padding: 0px;
+      margin: 0px;
+      line-height: normal
+      }
+      select.ui-pg-selbox {
+      width: auto;
+      padding: 0px;
+      margin: 0px;
+      line-height: normal
+      }
+    script(src='javascripts/lib/jquery/jquery.js')
+    script(src='javascripts/lib/jquery/jquery-ui.js')
+  body#mainBody
+    div#divBody
+      div.navbar.navbar-inverse
+        div.navbar-inner
+          div.container(style='width:auto')
+            a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand(href='#') Home
+            div.nav-collapse
+              ul.nav.pull-right
+                li
+                  a#btnLogin(href='#login') Login
+      .home(style='width: 225px; height: 195px; left: 76px; top: 160px;')
+        img(alt='', src='images/Human_Resources.gif', height='193', width='226')
+      div(style='position: absolute;')
+        div(style='width: 1px; height: 200px; background-color: black; float: left; position: absolute; left: 318px; top: 109px;')
+      div(style='position: absolute; left: 343px; top: 166px; text-align: center; vertical-align: top;')
+        table(align="center", style='position: relative')
+          tr
+            td
+              label#Label1 Last Name:&nbsp&nbsp
+            td
+              input#lastname( type='text', style='width: 290px;')
+            td(style='display:block')
+              a#btnSearch.btn(href='#search') Search
+      div(style='position: absolute; left: 733px; top: 214px;')
+        a.btn.btn-info#btnAdvSearch(href='#advsearch') Advanced Search
+      #divAdSearch(style='position: absolute; left: 343px; top: 215px; display: none;')
+        table
+          tr
+            td
+              label#Label2 Department:
+            td
+              input#department(type='text', style='width: 290px;')
+          tr
+            td
+              label#Label3 Title:
+            td
+              input#title(type='text', style='width: 290px;')
+      div(style='position: absolute; left: 1000px; top:70px;')
+      div#divLogin(style='display:none; position:absolute; left:1040px; top:50px;')
+        table
+          tr
+            td
+              Label Username
+            td
+              input#txtUsername(type='text')
+          tr
+            td
+              Label Password
+            td
+              input#txtPassword( type='password')
+          tr
+            td
+            td
+              a.btn#btnSubmitLogin(href='#submitlogin') Login
+      div#divSearchResults(style='position:absolute; display:none; left:1040px; top:220px;')
+        a.btn.btn-info#btnClose(href='#closeresults')
+          i.icon-remove.icon-white
